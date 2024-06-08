@@ -7,8 +7,8 @@ const App = () => {
   return (
     <div>
       {/* <Notes /> */}
-      <NotesLocalStorage />
-      {/* <DataFetch /> */}
+      {/* <NotesLocalStorage /> */}
+      <DataFetch />
     </div>
   );
 };

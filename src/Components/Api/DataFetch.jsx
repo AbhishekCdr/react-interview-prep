@@ -25,14 +25,9 @@ const DataFetch = () => {
         gap: "10px",
       }}
     >
-      {data.map((user) => (
-        <Card
-          key={user.id}
-          name={user.name}
-          email={user.email}
-          website={user.website}
-        />
-      ))}
+      {data.map((user) => {
+        return <Card {...user} />;
+      })}
     </div>
   );
 };
