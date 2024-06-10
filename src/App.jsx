@@ -3,6 +3,7 @@ import Notes from "./Components/Notes";
 import NotesLocalStorage from "./Components/NotesLocalStorage";
 import DataFetch from "./Components/Api/DataFetch";
 import Crowsel from "./Components/Crowsel/Crowsel";
+import CountDown from "./Components/CountDownTimer/CountDown";
 
 const App = () => {
   return (
@@ -10,7 +11,8 @@ const App = () => {
       {/* <Notes /> */}
       {/* <NotesLocalStorage /> */}
       {/* <DataFetch /> */}
-      <Crowsel />
+      {/* <Crowsel /> */}
+      <CountDown />
     </div>
   );
 };
