@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./CountDown.module.css";
 
 function CountDown() {
   const [count, setCount] = useState(0);
@@ -31,15 +32,10 @@ function CountDown() {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "10px",
-      }}
-    >
-      <h1>{formattTime(count)}</h1>
+    <div className={styles.main}>
+      <h1 style={count < 10 ? { color: "red" } : { color: "black" }}>
+        {formattTime(count)}
+      </h1>
       <div
         style={{
           display: "flex",
@@ -49,6 +45,7 @@ function CountDown() {
         }}
       >
         <button
+          className={styles.btn}
           onClick={() => {
             setCount(30);
           }}
@@ -56,6 +53,7 @@ function CountDown() {
           30sec
         </button>
         <button
+          className={styles.btn}
           onClick={() => {
             setCount(60);
           }}
@@ -63,11 +61,20 @@ function CountDown() {
           1min
         </button>
         <button
+          className={styles.btn}
           onClick={() => {
             setCount(120);
           }}
         >
           2min
+        </button>
+        <button
+          className={styles.btn}
+          onClick={() => {
+            setCount(0);
+          }}
+        >
+          reset
         </button>
       </div>
     </div>
