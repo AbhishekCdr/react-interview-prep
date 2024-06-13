@@ -10,11 +10,11 @@ function Modal() {
   }
 
   function onClose() {
-    setOpen(false);
+    setOpen((old) => !old);
   }
 
   return (
-    <div>
+    <div style={{ backgroundColor: "red" }}>
       <button onClick={onOpen}>Open Modal</button>
       <ModalComponent isOpen={isOpen} onClose={onClose}>
         <Children />

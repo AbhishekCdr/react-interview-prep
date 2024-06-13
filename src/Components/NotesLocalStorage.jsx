@@ -17,7 +17,7 @@ const NotesLocalStorage = () => {
     if (newNote.trim()) {
       //if entry is not emply then only
       const Note = { text: newNote, id: note.length + 1 }; //note schema object
-      const updatedNotes = [...note, Note];
+      const updatedNotes = [Note, ...note];
       setNote(updatedNotes); //add previous note with the latest one
       setNewNote(""); //set input to empty after adding
       localStorage.setItem("notes", JSON.stringify(updatedNotes));

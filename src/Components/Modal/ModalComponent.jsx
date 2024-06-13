@@ -1,6 +1,8 @@
 import { createPortal } from "react-dom";
 
-function ModalComponent({ isOpen, onClose, children }) {
+function ModalComponent(props) {
+  const { isOpen, onClose, children } = props;
+  //create portal used for modal
   return createPortal(
     <>
       {isOpen && (
@@ -33,6 +35,7 @@ function ModalComponent({ isOpen, onClose, children }) {
       )}
     </>,
     document.getElementById("modal-root")
+    // create new div inside index.html
   );
 }
 
